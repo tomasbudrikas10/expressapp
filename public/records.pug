@@ -1,0 +1,12 @@
+extends base.pug
+block content
+    table(class="border-2 border-black border-collapse mx-auto bg-white my-16")
+        thead
+            tr 
+                th(class="py-5 w-96 border-2 border-black")= "Record"
+                th(class="py-5 w-48 border-2 border-black")= "Date"
+        tbody
+            each row in rows
+                tr
+                    td(class="border-2 border-black")= row.record
+                    td(class="border-2 border-black")= row.date
